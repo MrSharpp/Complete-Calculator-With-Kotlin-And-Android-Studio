@@ -1,4 +1,4 @@
-# Complete Kotlin Calculator With Android Studio
+# Complete Calculator With Kotlin And Android Studio
  A beautifuly made calculator with kotlin and android studio with almost all required functionality
 
 🙏 **Please If You Liked This Repository, Please Leav A Start** 😟
