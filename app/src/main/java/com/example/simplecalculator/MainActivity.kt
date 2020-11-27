@@ -16,28 +16,28 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.one).setOnClickListener { appendOnClick(false,"1") }
-        findViewById<Button>(R.id.two).setOnClickListener { appendOnClick(false,"2") }
-        findViewById<Button>(R.id.three).setOnClickListener { appendOnClick(false,"3") }
-        findViewById<Button>(R.id.four).setOnClickListener { appendOnClick(false,"4") }
-        findViewById<Button>(R.id.five).setOnClickListener { appendOnClick(false,"5") }
-        findViewById<Button>(R.id.six).setOnClickListener { appendOnClick(false,"6") }
-        findViewById<Button>(R.id.seven).setOnClickListener { appendOnClick(false,"7") }
-        findViewById<Button>(R.id.eight).setOnClickListener { appendOnClick(false,"8") }
-        findViewById<Button>(R.id.nine).setOnClickListener { appendOnClick(false,"9") }
-        findViewById<Button>(R.id.zero).setOnClickListener { appendOnClick(false,"0") }
-        findViewById<Button>(R.id.multiply).setOnClickListener { appendOnClick(true,"*") }
-        findViewById<Button>(R.id.divide).setOnClickListener { appendOnClick(true,"/") }
-        findViewById<Button>(R.id.subtract).setOnClickListener { appendOnClick(true,"-") }
-        findViewById<Button>(R.id.add).setOnClickListener { appendOnClick(true,"+") }
+        findViewById<Button>(R.id.one).setOnClickListener { appendOnClick("1") }
+        findViewById<Button>(R.id.two).setOnClickListener { appendOnClick("2") }
+        findViewById<Button>(R.id.three).setOnClickListener { appendOnClick("3") }
+        findViewById<Button>(R.id.four).setOnClickListener { appendOnClick("4") }
+        findViewById<Button>(R.id.five).setOnClickListener { appendOnClick("5") }
+        findViewById<Button>(R.id.six).setOnClickListener { appendOnClick("6") }
+        findViewById<Button>(R.id.seven).setOnClickListener { appendOnClick("7") }
+        findViewById<Button>(R.id.eight).setOnClickListener { appendOnClick("8") }
+        findViewById<Button>(R.id.nine).setOnClickListener { appendOnClick("9") }
+        findViewById<Button>(R.id.zero).setOnClickListener { appendOnClick("0") }
+        findViewById<Button>(R.id.multiply).setOnClickListener { appendOnClick("*") }
+        findViewById<Button>(R.id.divide).setOnClickListener { appendOnClick("/") }
+        findViewById<Button>(R.id.subtract).setOnClickListener { appendOnClick("-") }
+        findViewById<Button>(R.id.add).setOnClickListener { appendOnClick("+") }
         findViewById<Button>(R.id.result).setOnClickListener { calculate() }
         findViewById<Button>(R.id.clearButton).setOnClickListener { clear() }
         findViewById<Button>(R.id.backspace).setOnClickListener { backspace() }
-        findViewById<Button>(R.id.point).setOnClickListener { appendOnClick(false, ".") }
+        findViewById<Button>(R.id.point).setOnClickListener { appendOnClick( ".") }
         
     }
 
-    private fun appendOnClick(clear:Boolean, string: String) {
+    private fun appendOnClick(string: String) {
         var history = findViewById<TextView>(R.id.history).text.toString()
         var verify = history.takeLast(1)
         if(string == "+" || string == "-" || string == "/" || string == "." || string == "*") if(verify == "+" || verify == "-" || verify == "/" || verify == "." || verify == "*") return
